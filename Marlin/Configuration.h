@@ -623,27 +623,34 @@
 #define HEATER_0_MINTEMP   5
 #define HEATER_1_MINTEMP   5
 #define HEATER_2_MINTEMP   5
-#define HEATER_3_MINTEMP   5
-#define HEATER_4_MINTEMP   5
-#define HEATER_5_MINTEMP   5
-#define HEATER_6_MINTEMP   5
-#define HEATER_7_MINTEMP   5
-#define BED_MINTEMP        5
-#define CHAMBER_MINTEMP    5
+
+// #define HEATER_3_MINTEMP   5
+// #define HEATER_4_MINTEMP   5
+// #define HEATER_5_MINTEMP   5
+// #define HEATER_6_MINTEMP   5
+// #define HEATER_7_MINTEMP   5
+
+#define BED_MINTEMP   5
+
+// #define CHAMBER_MINTEMP    5
 
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 305
-#define HEATER_1_MAXTEMP 275
-#define HEATER_2_MAXTEMP 275
-#define HEATER_3_MAXTEMP 275
-#define HEATER_4_MAXTEMP 275
-#define HEATER_5_MAXTEMP 275
-#define HEATER_6_MAXTEMP 275
-#define HEATER_7_MAXTEMP 275
-#define BED_MAXTEMP      150
-#define CHAMBER_MAXTEMP  60
+
+#define HEATER_0_MAXTEMP   305
+#define HEATER_1_MAXTEMP   275
+#define HEATER_2_MAXTEMP   275
+
+// #define HEATER_3_MAXTEMP 275
+// #define HEATER_4_MAXTEMP 275
+// #define HEATER_5_MAXTEMP 275
+// #define HEATER_6_MAXTEMP 275
+// #define HEATER_7_MAXTEMP 275
+
+#define BED_MAXTEMP   150
+
+// #define CHAMBER_MAXTEMP  60
 
 /**
  * Thermal Overshoot
@@ -669,7 +676,7 @@
  * MPCTEMP : Predictive Model temperature control. (~1.8K without auto-tune)
  */
 #define PIDTEMP           // See the PID Tuning Guide at https://reprap.org/wiki/PID_Tuning
-//#define MPCTEMP         // ** EXPERIMENTAL ** See https://marlinfw.org/docs/features/model_predictive_control.html
+// #define MPCTEMP         // ** EXPERIMENTAL ** See https://marlinfw.org/docs/features/model_predictive_control.html
 
 #define PID_MAX  255      // Limit hotend current while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 #define PID_K1     0.95   // Smoothing factor within any PID loop
@@ -1708,11 +1715,11 @@
 #define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
-#define INVERT_E3_DIR false
-#define INVERT_E4_DIR false
-#define INVERT_E5_DIR false
-#define INVERT_E6_DIR false
-#define INVERT_E7_DIR false
+// #define INVERT_E3_DIR false
+// #define INVERT_E4_DIR false
+// #define INVERT_E5_DIR false
+// #define INVERT_E6_DIR false
+// #define INVERT_E7_DIR false
 
 // @section homing
 
@@ -1927,7 +1934,8 @@
 //#define AUTO_BED_LEVELING_LINEAR
 //#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
-//#define MESH_BED_LEVELING
+
+// #define MESH_BED_LEVELING
 
 /**
  * Commands to execute at the end of G29 probing.
@@ -1946,7 +1954,8 @@
 /**
  * Auto-leveling needs preheating
  */
-//#define PREHEAT_BEFORE_LEVELING
+
+// #define PREHEAT_BEFORE_LEVELING
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
   #define LEVELING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
   #define LEVELING_BED_TEMP     50
@@ -2121,7 +2130,8 @@
 // @section homing
 
 // The center of the bed is at (X=0, Y=0)
-//#define BED_CENTER_AT_0_0
+
+#define BED_CENTER_AT_0_0
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
@@ -2142,7 +2152,8 @@
  * - Allows Z homing only when XY positions are known and trusted.
  * - If stepper drivers sleep, XY homing may be required again before Z homing.
  */
-//#define Z_SAFE_HOMING
+
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT X_CENTER  // (mm) X point for Z homing
@@ -2291,7 +2302,8 @@
  *    P1  Raise the nozzle always to Z-park height.
  *    P2  Raise the nozzle by Z-park amount, limited to Z_MAX_POS.
  */
-//#define NOZZLE_PARK_FEATURE
+
+#define NOZZLE_PARK_FEATURE
 
 #if ENABLED(NOZZLE_PARK_FEATURE)
   // Specify a park position as { X, Y, Z_raise }
@@ -2403,6 +2415,7 @@
  *   M76 - Pause the print job timer
  *   M77 - Stop the print job timer
  */
+
 #define PRINTJOB_TIMER_AUTOSTART
 
 // @section stats
@@ -2419,6 +2432,7 @@
  *
  * View the current statistics with M78.
  */
+
 //#define PRINTCOUNTER
 #if ENABLED(PRINTCOUNTER)
   #define PRINTCOUNTER_SAVE_INTERVAL 60 // (minutes) EEPROM save interval during print. A value of 0 will save stats at end of print.
