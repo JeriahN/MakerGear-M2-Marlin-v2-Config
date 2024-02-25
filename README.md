@@ -12,6 +12,8 @@
     <a href="https://fosstodon.org/@marlinfirmware"><img alt="Follow MarlinFirmware on Mastodon" src="https://img.shields.io/mastodon/follow/109450200866020466?domain=https%3A%2F%2Ffosstodon.org&logoColor=%2300B&style=social"></a>
 </p>
 
+
+# This is a Marlin Config for the MakerGear M2
 Additional documentation can be found at the [Marlin Home Page](https://marlinfw.org/).
 Please test this firmware and let us know if it misbehaves in any way. Volunteers are standing by!
 
@@ -20,6 +22,15 @@ Please test this firmware and let us know if it misbehaves in any way. Volunteer
 Marlin 2.1 continues to support both 32-bit ARM and 8-bit AVR boards while adding support for up to 9 coordinated axes and to up to 8 extruders.
 
 Download earlier versions of Marlin on the [Releases page](https://github.com/MarlinFirmware/Marlin/releases).
+
+## My M2 Configuration
+<p align="center">
+    <p>Black Z Motor</p>
+    <p>24V PSU</p>
+    <p>Zmin Top</p>
+    <p>V4 Hotend</p>
+    <p>No LCD</p>
+</p>
 
 ## Example Configurations
 
